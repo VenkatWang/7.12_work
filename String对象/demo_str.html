@@ -1,16 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-        var str="asdfghk";
-        console.log(str.charAt(1));
-        console.log(str.charCodeAt(1));
-    </script>
 </head>
+
 <body>
-    
+    <script>
+        //字符串长度
+        var str = "yang zhuo le";
+        console.log(str.length);
+        //str.charAt(index);返回下标为x的字符
+        console.log(str.charAt(2));
+        //返回数字对应的ACSCII码
+        console.log(String.fromCharCode(97))
+        //查找一个字符或者字符串在字符串中第一次出现的位置,未找到则返回-1
+        console.log(str.indexOf('a'));
+        console.log(str.indexOf('x'));
+        //倒查出现的位置
+        console.log(str.lastIndexOf('a'));
+        //str.replace("替换的内容","替换后的内容"),只能替换一个,不修改原来的值
+
+        var st = "da";
+        console.log(st.replace('a', 'd'));
+
+        //str.slice(起始下标,结束下标)识别负数，负数代表倒数,不包括结束下标
+        console.log(str.slice(0, 4));
+        // 不识别负数str.substring()
+        console.log(str.substring(-1, 5));
+        // str.substr(起始下标，截取的长度)
+        console.log(str.substr(1, 6));
+        //str.split('')将字符串分割，不修改源字符串
+        console.log(str.split('a'));
+        console.log(str.split(''));
+        //str.toLowerCase()转化为小写
+        var std = "ASDFASF";
+        console.log(std.toLocaleLowerCase());
+        //str.toUpperCase()转化为大写
+        console.log(str.toLocaleUpperCase())
+        //str.trim()去掉左右空格
+        var strd = "       aa      a    ";
+        console.log(strd.trim());
+        //str.match()
+        console.log(strd.match('a'));
+        //str.concat('a','b','c')连接两个或多个字符串，不修改源字符串
+        console.log(str, std);
+        //str.padStart() 、str.padEnd()向字符串开头(padStart)或结尾(padEnd)添加字符，使字符串达到指定的长度。
+        var time = new Date();
+        var h = String(time.getHours()).padStart(2, '0')
+        var m = String(time.getMinutes()).padStart(2, '0')
+        var s = String(time.getSeconds()).padStart(2, '0')
+        console.log(`${h}:${m}:${s}`)   
+    </script>
 </body>
+
 </html>
