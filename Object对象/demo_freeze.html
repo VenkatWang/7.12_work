@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    //阻止修改现有属性的特性和值，并阻止添加新属性
+    var obj={name:'张三',age:18};
+    Object.freeze(obj);
+    obj.name='李四';
+    obj.sex='男';
+    console.log(obj);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

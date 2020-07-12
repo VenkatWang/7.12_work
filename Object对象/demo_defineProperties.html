@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //直接在一个对象上定义一个或多个新的属性或修改现有属性，并返回该对象
+        var obj=new Object();
+        Object.defineProperties(obj,{
+            name:{
+                value:'张三',
+                coonfigurable:false,
+                writable:true,
+                enumerable:true
+            },
+            age:{
+                value:18,
+                configurable:true
+            }
+        })
+        console.log(obj.name,obj.age)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

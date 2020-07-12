@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //返回一个数组，包括对象自身的（不含继承的）所有可枚举属性（不含Symbol属性）的键名
+        var obj={'a':'123','b':'345'};
+        console.log(Object.keys(obj));
+
+        var obj1={100:'a',2:'b',7:'c'};
+        console.log(Object.keys(obj1));
+
+        var obj2=Object.create({},{getFoo:{value:function(){return this.foo}}});
+        obj2.foo=1;
+        console.log(Object.keys(obj2));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
